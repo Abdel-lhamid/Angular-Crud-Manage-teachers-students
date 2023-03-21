@@ -24,7 +24,7 @@ export class StudentCreateComponent implements OnInit {
   fgs = this.fb.group({
     student:this.fb.group({
       nameInput:['',[Validators.required,Validators.minLength(3)]],
-      emailInput:['',[Validators.required]],
+      emailInput:['',[Validators.required],[Validators.email]],
       fillierInput:['',[Validators.required]]
     })      
   })
