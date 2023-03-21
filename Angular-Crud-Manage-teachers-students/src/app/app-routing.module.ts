@@ -4,12 +4,18 @@ import { TeacherListComponent } from './teachers/teacher-list/teacher-list.compo
 import { TeacherCreateComponent } from './teachers/teacher-create/teacher-create.component';
 import { StudentListComponent } from './students/student-list/student-list.component';
 import { StudentCreateComponent } from './students/student-create/student-create.component';
+import { TeacherEditComponent } from './teachers/teacher-edit/teacher-edit.component';
 
 const routes: Routes = [
-  {path:"",component:TeacherListComponent},
+  {path:"teachers",component:TeacherListComponent},
   {path:"createteacher",component:TeacherCreateComponent},
+  {path:"editteacher",component:TeacherEditComponent},
+
   {path:"students",component:StudentListComponent},
-  {path:"createteacher",component:StudentCreateComponent},
+  {path:"createstudent",component:StudentCreateComponent},
+  {path:"editstudent",component:TeacherCreateComponent},
+
+
   
 ];
 

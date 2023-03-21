@@ -1,1 +1,20 @@
-<p>teacher-create works!</p>
+<div class="formbloc">
+    <form class="example-form" [formGroup]="fgt" (ngSubmit)="onAddNewTeacher(fgt.controls.teacher.controls)">
+        <div class="formbloc" formGroupName="teacher">
+            <h2>Create new teacher</h2>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Ex. Robert" formControlName="nameInput" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter email</mat-label>
+                <input matInput placeholder="pat@example.com" required formControlName="emailInput">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Salaire</mat-label>
+                <input matInput placeholder="Ex. 15000" formControlName="salaireInput">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="fgt.invalid">Create</button>
+        </div>
+    </form>
+  </div>

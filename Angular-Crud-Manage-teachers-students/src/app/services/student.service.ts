@@ -27,4 +27,9 @@ export class StudentService {
   }
 
 
+  addNewStudent(student:Student){
+    this.students.push(student)
+
+  }
+
 }

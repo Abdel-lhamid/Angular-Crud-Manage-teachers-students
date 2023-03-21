@@ -26,4 +26,8 @@ export class TeacherService {
   getAllTeachers(){
     return this.teachers
   }
+
+  addNewTeacher(teacher:Teacher){
+    this.teachers.push(teacher)
+  }
 }

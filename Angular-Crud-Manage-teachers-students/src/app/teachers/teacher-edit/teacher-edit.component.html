@@ -1,1 +1,21 @@
-<p>teacher-edit works!</p>
+<div class="formbloc">
+    <form class="example-form">
+        <div class="formbloc">
+            <h2>Edite teacher</h2>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Ex. Robert" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter email</mat-label>
+                <input matInput placeholder="pat@example.com" required>
+            <!--<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Salaire</mat-label>
+                <input matInput placeholder="Ex. 15000" >
+            </mat-form-field>
+            <button mat-raised-button color="primary">Update</button>
+        </div>
+    </form>
+  </div>
