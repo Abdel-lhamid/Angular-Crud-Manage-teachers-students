@@ -5,10 +5,10 @@
       <mat-card-subtitle>Salaire:{{teacher.salaire}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions align="end">
-      <button mat-fab color="primary">
+      <button mat-fab color="primary" routerLink="editteacher/{{index}}">
           <mat-icon>edite</mat-icon>
         </button>
-      <button mat-fab color="warn" routerLink="editteacher/:">
+      <button mat-fab color="warn"  (click)="deleteTeacher(index)">
           <mat-icon>delete</mat-icon>
         </button> 
         </mat-card-actions>

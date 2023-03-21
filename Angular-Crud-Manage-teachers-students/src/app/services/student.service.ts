@@ -39,4 +39,13 @@ export class StudentService {
   updateStudent(index:number,newStudent:Student){
     this.students[index]=newStudent
   }
+  deleteStudent(index:number){
+    this.students.splice(index,1)
+  
+  }
 }
+
+
+// deletePost(index:number){
+//   this.posts.splice(index,1)
+// }

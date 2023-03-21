@@ -38,4 +38,9 @@ export class TeacherService {
   updateTeacher(index:number,newTeacher:Teacher){
     this.teachers[index]=newTeacher
   }
+
+  deleteTeacher(index:number){
+    this.teachers.splice(index,1)
+
+  }
 }

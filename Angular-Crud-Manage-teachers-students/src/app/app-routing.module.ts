@@ -10,13 +10,13 @@ import { StudentEditComponent } from './students/student-edit/student-edit.compo
 const routes: Routes = [
   {path:"teachers",component:TeacherListComponent},
   {path:"createteacher",component:TeacherCreateComponent},
-  {path:"editteacher/:teacherIndex",component:TeacherEditComponent},
+  {path:"teachers/editteacher/:teacherIndex",component:TeacherEditComponent},
 
   {path:"students",component:StudentListComponent},
   {path:"createstudent",component:StudentCreateComponent},
-  {path:"editstudent/:studentIndex",component:StudentEditComponent},
+  {path:"students/editstudent/:studentIndex",component:StudentEditComponent},
 
-  {path:'**',redirectTo:"teachers"}
+  //{path:'**',redirectTo:"teachers"}
 
 
   

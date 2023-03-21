@@ -5,10 +5,10 @@
       <mat-card-subtitle>Fillier:{{student.fillier}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions align="end">
-      <button mat-fab color="primary" routerLink="editstudent/:0">
+      <button mat-fab color="primary" routerLink="editstudent/{{index}}">
           <mat-icon>edite</mat-icon>
         </button>
-      <button mat-fab color="warn">
+      <button mat-fab color="warn" (click)="deleteStudent(index)">
           <mat-icon>delete</mat-icon>
         </button> 
         </mat-card-actions>
