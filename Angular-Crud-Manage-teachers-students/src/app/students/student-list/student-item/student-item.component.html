@@ -1,1 +1,15 @@
-<p>student-item works!</p>
+<mat-card >
+    <mat-card-header>
+      <mat-card-title>Student:{{student.name}}</mat-card-title>
+      <mat-card-subtitle>Email:{{student.email}}</mat-card-subtitle>
+      <mat-card-subtitle>Fillier:{{student.fillier}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <button mat-fab color="primary">
+          <mat-icon>edite</mat-icon>
+        </button>
+      <button mat-fab color="warn">
+          <mat-icon>delete</mat-icon>
+        </button> 
+        </mat-card-actions>
+  </mat-card>

@@ -21,4 +21,10 @@ export class StudentService {
   ]
 
   constructor() { }
+
+  getAllStudents(){
+    return this.students
+  }
+
+
 }

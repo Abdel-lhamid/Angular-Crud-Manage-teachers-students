@@ -22,4 +22,8 @@ export class TeacherService {
   ]
 
   constructor() { }
+
+  getAllTeachers(){
+    return this.teachers
+  }
 }
