@@ -5,6 +5,7 @@ import { TeacherCreateComponent } from './teachers/teacher-create/teacher-create
 import { StudentListComponent } from './students/student-list/student-list.component';
 import { StudentCreateComponent } from './students/student-create/student-create.component';
 import { TeacherEditComponent } from './teachers/teacher-edit/teacher-edit.component';
+import { StudentEditComponent } from './students/student-edit/student-edit.component';
 
 const routes: Routes = [
   {path:"teachers",component:TeacherListComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
 
   {path:"students",component:StudentListComponent},
   {path:"createstudent",component:StudentCreateComponent},
-  {path:"editstudent/:studentIndex",component:TeacherCreateComponent},
+  {path:"editstudent/:studentIndex",component:StudentEditComponent},
 
   {path:'**',redirectTo:"teachers"}
 

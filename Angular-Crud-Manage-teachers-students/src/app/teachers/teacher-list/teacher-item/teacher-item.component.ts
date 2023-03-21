@@ -9,5 +9,7 @@ import { Teacher } from '../../../models/teache.model';
 export class TeacherItemComponent {
 
   @Input()teacher:Teacher
+  @Input()index:number
+
 
 }

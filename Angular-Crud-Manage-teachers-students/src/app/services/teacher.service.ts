@@ -30,4 +30,12 @@ export class TeacherService {
   addNewTeacher(teacher:Teacher){
     this.teachers.push(teacher)
   }
+
+  findTeacherByIndex(index:number){
+    return this.teachers[index]
+  }
+
+  updateTeacher(index:number,newTeacher:Teacher){
+    this.teachers[index]=newTeacher
+  }
 }

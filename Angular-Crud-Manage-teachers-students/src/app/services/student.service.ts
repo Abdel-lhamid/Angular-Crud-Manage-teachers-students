@@ -32,4 +32,11 @@ export class StudentService {
 
   }
 
+  findStudentByIndex(index:number){
+    return this.students[index]
+    
+  }
+  updateStudent(index:number,newStudent:Student){
+    this.students[index]=newStudent
+  }
 }

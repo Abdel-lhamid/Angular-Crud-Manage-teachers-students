@@ -8,4 +8,5 @@ import { Student } from '../../../models/student.model';
 })
 export class StudentItemComponent {
   @Input()student:Student
+  @Input()index:number
 }

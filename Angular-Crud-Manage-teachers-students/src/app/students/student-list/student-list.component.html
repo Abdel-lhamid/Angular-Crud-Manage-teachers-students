@@ -1,3 +1,3 @@
-<div *ngFor="let student of students">
-  <app-student-item [student]="student"></app-student-item>
+<div *ngFor="let student of students;let i =index">
+  <app-student-item [student]="student" [index]="i"></app-student-item>
 </div>
