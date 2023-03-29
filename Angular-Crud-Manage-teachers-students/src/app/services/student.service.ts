@@ -1,51 +1,49 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Student } from '../models/student.model';
+
+const BASE_URL='http://localhost:4000'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class StudentService {
 
-  students:Student[]=[
-    {
-    name:"amin",
-    email:"amin@gmail.com",
-    fillier:"ifsdm"
-    },
-    {
-      name:"walid",
-      email:"walid@gmail.com",
-      fillier:"2sdi"
-      }
+  constructor(private http:HttpClient){
 
-  ]
+  }
+  private getUrl(){
+    return '${BASE_URL}/${this.model}';
+  }
+  private getUrlwithId(id:any){
+    return '${this.getUrl()}/${id}';
+  }
 
-  constructor() { }
+  
 
-  getAllStudents(){
-    return this.students
+  getAllStudents():Observable<any[]>{
+    return this.http.get<any[]>(this.getUrl())
   }
 
 
-  addNewStudent(student:Student){
-    this.students.push(student)
+  addNewStudent(student:Student):Observable<any[]>{
+    return this.http.post<any[]>('${this.getUrl()}',student);
 
   }
 
-  findStudentByIndex(index:number){
-    return this.students[index]
+  findStudentByIndex(index:number):Observable<any[]>{
+    return this.http.get<any[]>(this.getUrlwithId(index));
     
   }
   updateStudent(index:number,newStudent:Student){
-    this.students[index]=newStudent
+    return this.http.patch(this.getUrlwithId(index),newStudent);
   }
   deleteStudent(index:number){
-    this.students.splice(index,1)
+    return this.http.delete(this.getUrlwithId(index));
   
   }
 }
 
 
-// deletePost(index:number){
-//   this.posts.splice(index,1)
-// }
