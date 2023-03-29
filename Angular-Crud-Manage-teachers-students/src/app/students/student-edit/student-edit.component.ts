@@ -17,13 +17,15 @@ export class StudentEditComponent implements OnInit {
 
   }
   studentIndex=0
-  studenttoedit:Student
+  studenttoedit:any
   newStudent:Student
   ngOnInit(): void {
     this.activeRoute.paramMap.subscribe(param =>{
       this.studentIndex = +param.get('studentIndex')!
       
-      this.studenttoedit=this.studentService.findStudentByIndex(this.studentIndex)
+      this.studentService.findStudentByIndex(this.studentIndex).subscribe(res=>{
+        this.studenttoedit= res;
+      })
       console.log(this.studenttoedit)
       this.s.student.controls.nameInput.setValue(this.studenttoedit.name) 
       this.s.student.controls.emailInput.setValue(this.studenttoedit.email)

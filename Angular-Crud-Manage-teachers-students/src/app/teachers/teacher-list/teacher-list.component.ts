@@ -15,8 +15,10 @@ export class TeacherListComponent implements OnInit{
   teachers:Teacher[]
   teacher:Teacher;
   ngOnInit(): void {
-    this.teachers = this.teacherService.getAllTeachers()
-    console.log(this.teachers);
+    this.teacherService.getAllTeachers().subscribe(res=>{
+      this.teachers = res;
+    })
+   // this.teachers = this.teacherService.getAllTeachers()
   }
 
 

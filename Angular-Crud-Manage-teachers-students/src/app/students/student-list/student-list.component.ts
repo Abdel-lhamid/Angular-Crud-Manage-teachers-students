@@ -10,11 +10,14 @@ import { Student } from '../../models/student.model';
 export class StudentListComponent implements OnInit{
 
 
-  constructor(private studentServide:StudentService){}
-   students:Student[]
+  constructor(private studentServise:StudentService){}
+   students:Student[];
    student:Student;
   ngOnInit(): void {
-    this.students = this.studentServide.getAllStudents()
+    this.studentServise.getAllStudents().subscribe(res=>{
+      this.students = res;
+    })
+    //this.students = this.studentServise.getAllStudents()
   }
 
  

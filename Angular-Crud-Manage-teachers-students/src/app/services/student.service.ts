@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Student } from '../models/student.model';
 
-const BASE_URL='http://localhost:4000'
+const BASE_URL='http://localhost:4200'
 
 @Injectable({
   providedIn: 'root'

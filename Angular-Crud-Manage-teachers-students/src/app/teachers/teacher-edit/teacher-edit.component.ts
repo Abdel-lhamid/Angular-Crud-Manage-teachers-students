@@ -19,7 +19,8 @@ export class TeacherEditComponent implements OnInit {
   }
 
   teacherIndex=0
-  teachertoedit:Teacher
+  teachertoedit:any
+  
   newTeacher:Teacher
 
   ngOnInit(): void {
